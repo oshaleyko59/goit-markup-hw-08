@@ -1,0 +1,28 @@
+.filters {
+  @include flex(null);
+
+  //elements styles
+  &__item {
+    margin-left: 8px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+&__btn {
+  color: var(--color-secondary);
+  @include font(500, 16px, calc(26 / 16), null);
+  padding: 6px 22px;
+  transition: background-color var(--anim-timing), color var(--anim-timing),
+    box-shadow var(--anim-timing);
+
+  &:hover,
+  & :focus {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    box-shadow: var(--shadow-btn-triple);
+  }
+}
+}
+

@@ -1,0 +1,54 @@
+.card {
+  height: 404px;
+  width: 370px;
+  transition: box-shadow var(--anim-timing);
+
+  &:hover {
+    box-shadow: var(--card-shadow);
+  }
+}
+
+/* =   Синій оверлей з текстом на картках сторінки Портфоліо з'являється
+при ховері в будь-якому місці картки. оверлей  виїжджає знизу */
+.card__wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__overlay {
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: #ffffff;
+  @include font(400, 18px, calc(28 / 18), null);
+
+  position: absolute;
+  top: 100%;
+  transition: top var(--anim-timing);
+  .card:hover & {
+    top: 0px;
+  }
+}
+
+.card__description {
+  padding: 20px 24px 19px;
+  border-bottom: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+}
+
+.card__title {
+  @include font(700, 18px, 2, 0.06);
+  color: var(--color-secondary);
+  margin-bottom: 4px;
+}
+
+.card__subtitle {
+  @include font(null, 16px, calc(30 / 16), null);
+  color: var(--color-primary);
+}
+
+
+
+

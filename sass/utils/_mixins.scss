@@ -1,0 +1,59 @@
+@mixin font($fw, $fs, $lh, $ls: 0.06em) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin accented-link {
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+    fill: var(--color-accent);
+  }
+}
+
+@mixin white-on-accent {
+  color: var(--color-white);
+  background-color: var(--color-accent);
+}
+
+@mixin btn-white-on-accent($w) {
+  width: $w;
+  height: 50px;
+  @include white-on-accent;
+  box-shadow: var(--btn-shadow);
+  @include font(700, 16px, calc(30 / 16));
+}
+
+@mixin flex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flex-centered($gap: 10px) {
+  @include flex();
+  gap: $gap;
+}
+
+@mixin round($diameter: 100%) {
+  width: $diameter;
+  height: $diameter;
+  border-radius: 50%;
+}
+
+@mixin cardset($gap) {
+   display: flex;
+  flex-wrap: wrap;
+  margin-top: calc((-1) * $gap);
+  margin-left: calc((-1) * $gap);
+}
+
+@mixin cardset-item($gap, $columns) {
+   margin-left: $gap;
+  margin-top: $gap;
+  flex-basis: calc(
+    100% / $columns - $gap * ($columns - 1)
+  );
+}

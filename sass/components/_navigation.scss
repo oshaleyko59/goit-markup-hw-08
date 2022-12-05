@@ -1,0 +1,37 @@
+.navigation {
+  //no block styles
+
+  //Elements styles
+  &__list {
+    @extend %hdr-list;
+    @include font(500, null, 3, 0.02em);
+  }
+
+  &__link {
+    //Element styles
+    display: inline-block;
+    color: var(--color-secondary);
+    text-align: center;
+    transition: color var(--anim-timing);
+
+    //modificators
+    &--current {
+      position: relative;
+      color: var(--color-accent);
+    }
+
+    &--current::after {
+      content: "";
+      height: 4px;
+      width: 100%;
+      background-color: var(--color-accent);
+      display: block;
+      position: absolute;
+      bottom: -20px;
+    }
+
+    &--active {
+      @include accented-link;
+    }
+  }
+}

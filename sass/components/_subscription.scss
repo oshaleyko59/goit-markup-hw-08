@@ -1,0 +1,29 @@
+.send-email {
+  display: flex;
+  gap: 12px;
+}
+
+.send-email__input {
+  height: 50px;
+  width: 358px;
+  padding: 15px 16px;
+  background-color: transparent;
+  @include font(400, 16px, calc(20 / 16), null);
+  color: var(--color-ftr-text);
+
+  border: var(--border-email-input);
+  border-radius: 4px;
+  box-shadow: none;
+  transition: border-color var(--anim-timing), box-shadow var(--anim-timing);
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-accent);
+    box-shadow: var(--btn-shadow);
+  }
+}
+
+.send-email__btn {
+  @include btn-white-on-accent(200px);
+}
+

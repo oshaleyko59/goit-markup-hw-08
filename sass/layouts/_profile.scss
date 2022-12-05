@@ -1,0 +1,46 @@
+.profile {
+  padding: 94px 0;
+}
+
+.profile__item {
+  width: 270px;
+
+  &::before {
+    display: block;
+    content: "";
+    height: 120px;
+    width: 270px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: var(--color-background-secondary);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.attention.profile__item::before {
+  background-image: url("../images/antenna.svg");
+}
+.punctuality.profile__item::before {
+  background-image: url("../images/clock.svg");
+}
+.planning.profile__item::before {
+  background-image: url("../images/diagram.svg");
+}
+
+.technology.profile__item::before {
+  background-image: url("../images/astronaut.svg");
+}
+
+.profile__title {
+  color: var(--color-secondary);
+  @include font(null, 14px, calc(16 / 14), null);
+
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.profile__description {
+  text-transform: capitalize;
+}

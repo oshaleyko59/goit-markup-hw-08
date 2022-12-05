@@ -1,0 +1,32 @@
+.ftr {
+  //block styles
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--color-background-black);
+
+  //Elements
+  &__wrap {
+    padding-top: 12px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    @include font(null, 14px, calc(16.41 / 14), null);
+  }
+
+  //Mixes
+  &__logo {
+    color: var(--color-white);
+    margin-bottom: 20px;
+    margin-right: 93px;
+  }
+
+  &__container {
+   @include flex(baseline, space-between);
+  }
+
+}
+
+

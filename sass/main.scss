@@ -1,0 +1,33 @@
+@import './utils/mixins';
+@import './utils/placeholders';
+//NB! mixins must always be first import
+
+@import './base/reset';
+@import './base/aux';
+
+@import './utils/variables';
+@import './utils/hide';
+
+@import './components/contacts';
+@import './components/navigation';
+@import './components/container';
+@import './components/logo';
+@import './components/addr';
+@import './components/card';
+@import './components/cardset';
+
+@import './components/subscription';
+@import './components/soc-links';
+@import './components/modal';
+@import './components/filters';
+@import './components/cardset';
+@import './components/buttons';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/profile';
+@import './layouts/competence';
+@import './layouts/team';
+@import './layouts/clients';
+@import './layouts/portfolio';
+@import './layouts/footer';

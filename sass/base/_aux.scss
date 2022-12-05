@@ -1,0 +1,11 @@
+.section-title {
+  color: var(--color-secondary);
+  @include font(null, 36px, calc(42 / 36), null);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-list {
+  @include flex(flex-start, space-between);
+  gap: 30px;
+}

@@ -1,0 +1,7 @@
+.cardset {
+  @include cardset(var(--card-gap));
+}
+
+.cardset__item {
+  @include cardset-item(var(--card-gap), var(--card-columns));
+}

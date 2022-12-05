@@ -1,0 +1,9 @@
+%hdr-list {
+  display: flex;
+  padding: auto 0;
+
+  & > li:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+

@@ -1,0 +1,11 @@
+.logo {
+  //Block styles
+  @include font(700, 26px, calc(31 / 26), null);
+  font-family: Raleway;
+  display: inline-block;
+
+  //Element styles
+  &__accent {
+    color: var(--color-accent);
+  }
+}

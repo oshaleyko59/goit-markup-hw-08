@@ -1,0 +1,27 @@
+.addr {
+  font-style: inherit;
+
+  &__list {
+    padding: 0px;
+  }
+
+  &__link {
+    display:block;
+    line-height: 24px;
+    color: var(--color-ftr-text);
+    @include accented-link;
+  }
+
+  &__link--white{
+    color: var(--color-white);
+  }
+}
+
+li.addr__item {
+      height: 21px;
+      margin-bottom: 9px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }

@@ -1,0 +1,29 @@
+.btn {
+  border-radius: 4px;
+  border-style: none;
+  @include flex-centered();
+}
+
+/* оформлення кнопки закриття модального вікна  */
+.btn-close {
+  @include round(30px);
+/*   width: 30px;
+  height: 30px;
+  border-radius: 50%; */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  @include flex-centered(null);
+  fill: var(--color-secondary);
+  transition: fill var(--anim-timing);
+
+  &:hover,
+  &:focus {
+    fill: var(--color-accent);
+  }
+}
+
+

@@ -1,0 +1,41 @@
+.soc-list {
+  //block styles
+  display: flex;
+  gap: 10px;
+
+  //elements styles
+  &__item {
+    width: 44px;
+    height: 44px;
+  }
+
+  &__link {
+    @include round();
+    @include flex-centered();
+     background-color: transparent;
+    transition: background-color var(--anim-timing);
+
+    //link modificators
+    &--bkg-dark {
+ background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    //active link styles
+    &:focus,
+    &:hover {
+      background-color: var(--color-accent);
+    }
+    }
+
+  &__icon {
+  fill: var(--color-fill-inactive);
+    transition: fill var(--anim-timing);
+
+    .soc-list__link:focus &,
+    .soc-list__link:hover & {
+      fill: #fff;
+    }
+  }
+
+}
+

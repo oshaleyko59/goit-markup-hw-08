@@ -1,0 +1,14 @@
+/* line height increased to extende link active zone */
+.contacts {
+  @extend %hdr-list;
+  @include font(500, null, 3, null);
+
+  //elements styles
+  &__link {
+    color: var(--color-primary);
+    @include flex-centered();
+    fill: var(--color-primary);
+    transition: color var(--anim-timing), fill var(--anim-timing);
+@include accented-link;
+  }
+}

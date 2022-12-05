@@ -1,0 +1,24 @@
+.competence {
+  padding-bottom: 94px;
+}
+
+.competence__item {
+  width: 370px;
+  position: relative;
+}
+
+/* = В секції Чим ми займаємось текст з фоном спозиційований
+поверх зображення. */
+.competence__title {
+  position: absolute;
+  width: inherit;
+  height: 70px;
+  padding-top: 27px;
+  bottom: 0px;
+  background-color: rgba(47, 48, 58, 0.8);
+  @include font(null, 14px, calc(16.41 / 14), null);
+  color: #ffffff;
+
+  text-align: center;
+  text-transform: uppercase;
+}
