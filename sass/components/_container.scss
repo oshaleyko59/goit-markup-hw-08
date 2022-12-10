@@ -1,7 +1,45 @@
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-  /* outline: 2px solid red; */
+div.test-div {
+ // padding: 30px;
+background-color: aqua;
+width: 100%;
+margin: 0 auto;
+text-align: left;
 }
+
+.container {
+  width:calc(100% - 20px);
+  padding: 0 15px;
+  margin: 0 auto;
+
+ // outline: 2px solid red;
+ background-color: orange;
+
+   @media screen and (min-width: 480px) {
+    background-color: teal;
+  }
+
+    @media screen and (min-width: 768px) {
+      background-color: blue;
+    }
+
+    @media screen and (min-width: 1200px) {
+      background-color: white;
+    }
+}
+
+ // breakpoint are 480 768 & 1200px
+//   @media screen and (min-width: 480px) {
+// .container {      background-color: teal;
+//     }
+//   }
+
+//     @media screen and (min-width: 768px) {
+//     .container {
+//       background-color: blue;
+//     }
+//   }
+//     @media screen and (min-width: 1200px) {
+//     .container {
+//       background-color: white;
+//     }
+//   }

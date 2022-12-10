@@ -6,6 +6,8 @@
 }
 
 .section-list {
-  @include flex(flex-start, space-between);
+/*   @include flex(flex-start, space-between);
   gap: 30px;
+  flex-direction: column; */
+  color: red;
 }

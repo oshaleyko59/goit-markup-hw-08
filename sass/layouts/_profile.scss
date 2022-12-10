@@ -1,15 +1,31 @@
 .profile {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
+}
+
+.profile-list {
+
+  @media screen and (min-width: 1200px) {
+    @include flex(flex-start, space-between);
+    gap: 30px;
+    flex-direction: column;
+
+    //TODO
+    color: red;
+  }
 }
 
 .profile__item {
-  width: 270px;
+  width: calc(100% - 60px); //270px;
 
   &::before {
     display: block;
     content: "";
-    height: 120px;
-    width: 270px;
+    height: 120px; //calc(200 * 120 / 270); //120px;
+    width: calc(100% - 50px); //270px;
     margin-bottom: 30px;
     border-radius: 4px;
     background-color: var(--color-background-secondary);
@@ -20,6 +36,7 @@
 
 .attention.profile__item::before {
   background-image: url("../images/antenna.svg");
+
 }
 .punctuality.profile__item::before {
   background-image: url("../images/clock.svg");
@@ -36,11 +53,12 @@
   color: var(--color-secondary);
   @include font(null, 14px, calc(16 / 14), null);
 
-  text-align: left;
+  text-align:center;
+ // text-align: left;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .profile__description {
-  text-transform: capitalize;
+  text-transform:none;
 }

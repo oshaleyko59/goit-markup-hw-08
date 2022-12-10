@@ -1,4 +1,8 @@
 :root {
+  // Верстка виконана щодо трьох точок перелому: 480px, 768px і 1200px.
+  --width-phone: 480px;
+  --width-tablet:768px;
+  --width-desktop:1200px;
   --color-primary: #757575;
   --color-secondary: #212121;
   --color-accent: #2196f3;
