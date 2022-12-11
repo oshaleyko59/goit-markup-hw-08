@@ -239,19 +239,19 @@ body {
 }
 
 .attention.profile__item::before {
-  background-image: url("../images/antenna.svg");
+  background-image: url("../images/profile/antenna.svg");
 }
 
 .punctuality.profile__item::before {
-  background-image: url("../images/clock.svg");
+  background-image: url("../images/profile/clock.svg");
 }
 
 .planning.profile__item::before {
-  background-image: url("../images/diagram.svg");
+  background-image: url("../images/profile/diagram.svg");
 }
 
 .technology.profile__item::before {
-  background-image: url("../images/astronaut.svg");
+  background-image: url("../images/profile/astronaut.svg");
 }
 
 .clients {
