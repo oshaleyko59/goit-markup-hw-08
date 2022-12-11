@@ -1,22 +1,25 @@
-@import './utils/mixins';
+      @import './utils/mixins';
 //@import './utils/placeholders';
 //NB! mixins must always be first import
 
-@import './base/reset';
-@import './base/aux';
+@import './utils/test';
 
-@import './utils/variables';
-@import './utils/hide';
-@import './components/container';
-@import './layouts/competence';
+
+      @import './base/reset';
+      @import './base/aux';
+
+       @import './utils/variables';
+       @import './utils/hide';
+       @import './components/container';
+       @import './layouts/competence';
 
 
 // @import './components/contacts';
 // @import './components/navigation';
 // @import './components/logo';
 // @import './components/addr';
- @import './components/card';
- @import './components/cardset';
+      // @import './components/card';
+      //@import './components/cardset';
 
 // @import './components/subscription';
 // @import './components/soc-links';
@@ -25,9 +28,9 @@
 // @import './components/buttons';
 
 // @import './layouts/header';
- @import './layouts/hero';
- @import './layouts/profile';
+      //@import './layouts/hero';
+      @import './layouts/profile';
 // @import './layouts/team';
- @import './layouts/clients';
+      //@import './layouts/clients';
 // @import './layouts/portfolio';
 // @import './layouts/footer';

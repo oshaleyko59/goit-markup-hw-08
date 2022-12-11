@@ -1,4 +1,112 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  letter-spacing: 0.03em;
+}
+
+.test-div {
+  background-color: aqua;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.div-fluid {
+  padding: 1rem 0;
+  background-color: teal;
+}
+
+/* Приклад респонсивної верстки */
+.container-1 {
+  width: 100%;
+  min-height: 100px;
+  padding: 1rem 0;
+  background-color: rgb(111, 124, 124);
+}
+
+@media screen and (min-width: 450px) {
+  .container-1 {
+    width: 60%;
+    background-color: rgb(174, 168, 211);
+  }
+}
+@media screen and (min-width: 550px) {
+  .container-1 {
+    width: 30%;
+    background-color: rgb(107, 74, 130);
+  }
+}
+/* Приклад адаптивної верстки */
+/* .container-1{
+  width: 180px;
+  min-width: 280px;
+  min-height: 100px;
+  padding: 1rem 0;
+  background-color: teal;
+}
+@media screen and (min-width: 350px) {
+  .container-1 {
+    width: 270px;
+    background-color: slateblue;
+  }
+}
+@media screen and (min-width: 550px) {
+  .container-1 {
+    width: 320px;
+    background-color: indigo;
+  }
+} */
+/* .container-fluid {
+  padding: 1rem 0;
+  background-color: teal;
+}
+.container {
+  min-height: 100px;
+  width: 320px;
+  margin: auto;
+  background-color: antiquewhite;
+}
+@media screen and (min-width: 550px) {
+  .container-fluid {
+    background-color: slateblue;
+  }
+  .container {
+    width: calc(550px - 20px);
+    background-color: lavender;
+  }
+} */
 h1,
 h2,
 h3,
@@ -113,13 +221,6 @@ body {
   pointer-events: none;
 }
 
-div.test-div {
-  background-color: aqua;
-  width: 100%;
-  margin: 0 auto;
-  text-align: left;
-}
-
 .container {
   width: calc(100% - 20px);
   padding: 0 15px;
@@ -175,111 +276,6 @@ div.test-div {
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-}
-
-.card {
-  height: 404px;
-  width: 370px;
-  transition: box-shadow var(--anim-timing);
-}
-.card:hover {
-  box-shadow: var(--card-shadow);
-}
-
-/* =   Синій оверлей з текстом на картках сторінки Портфоліо з'являється
-при ховері в будь-якому місці картки. оверлей  виїжджає знизу */
-.card__wrap {
-  position: relative;
-  overflow: hidden;
-}
-
-.card__overlay {
-  width: 100%;
-  height: 100%;
-  padding: 63px 24px;
-  background-color: rgba(33, 150, 243, 0.9);
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.5555555556;
-  position: absolute;
-  top: 100%;
-  transition: top var(--anim-timing);
-}
-.card:hover .card__overlay {
-  top: 0px;
-}
-
-.card__description {
-  padding: 20px 24px 19px;
-  border-bottom: 1px solid var(--color-border);
-  border-left: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
-}
-
-.card__title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06;
-  color: var(--color-secondary);
-  margin-bottom: 4px;
-}
-
-.card__subtitle {
-  font-size: 16px;
-  line-height: 1.875;
-  color: var(--color-primary);
-}
-
-.cardset {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--card-gap));
-  margin-left: calc(-1 * var(--card-gap));
-}
-
-.cardset__item {
-  margin-left: var(--card-gap);
-  margin-top: var(--card-gap);
-  flex-basis: calc(100% / var(--card-columns) - var(--card-gap) * (var(--card-columns) - 1));
-}
-
-/* фон - Велике зображення з ефектом затемнення (під хедером).
-не розтягується ширше свого оригінального розміру 1600рх.
-Затемнення - багатошаровий фон з градієнтом  */
-.hero {
-  width: 100%;
-  /* background-color: var(--color-background-black); */
-  background-color: #c4c4c4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/HeroImg480.jpg);
-  background-size: 480px 400px;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-.hero__btn {
-  width: 216px;
-  height: 50px;
-  color: var(--color-white);
-  background-color: var(--color-accent);
-  box-shadow: var(--btn-shadow);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-}
-
-.hero__title {
-  color: var(--color-white);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3636363636;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 .profile {
@@ -344,37 +340,4 @@ div.test-div {
 
 .profile__description {
   text-transform: none;
-}
-
-.clients {
-  padding: 94px 0;
-}
-
-.clients-item {
-  height: 92px;
-  width: 170px;
-}
-
-.client-link {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  border-radius: 4px;
-  border: 1px solid var(--color-fill-inactive);
-  padding: 16px 32px;
-  transition: border-color var(--anim-timing);
-}
-.client-link:focus, .client-link:hover {
-  border-color: var(--color-accent);
-}
-
-.clients-icon {
-  height: 60px;
-  width: 106px;
-  fill: var(--color-fill-inactive);
-  transition: fill var(--anim-timing);
-}
-.client-link:focus .clients-icon, .client-link:hover .clients-icon {
-  fill: var(--color-accent);
 }

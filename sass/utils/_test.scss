@@ -1,0 +1,118 @@
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+ // max-width: 100%;
+ // height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-family: Roboto, sans-serif;
+  //@include font(null, 14px, calc(24 / 14), 0.03em);
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+}
+
+.test-div {
+ // padding: 30px;
+background-color: aqua;
+width: 100%;
+margin: 0 auto;
+text-align: left;
+}
+
+.div-fluid {
+  padding: 1rem 0;
+  background-color: teal;
+}
+
+/* Приклад респонсивної верстки */
+.container-1 {
+  width: 100%;
+  min-height: 100px;
+  padding: 1rem 0;
+  background-color: rgb(111, 124, 124);
+}
+@media screen and (min-width: 450px) {
+  .container-1 {
+    width: 60%;
+    background-color: rgb(174, 168, 211);
+  }
+}
+@media screen and (min-width: 550px) {
+  .container-1 {
+    width: 30%;
+    background-color: rgb(107, 74, 130);
+  }
+}
+
+/* Приклад адаптивної верстки */
+/* .container-1{
+  width: 180px;
+  min-width: 280px;
+  min-height: 100px;
+  padding: 1rem 0;
+  background-color: teal;
+}
+@media screen and (min-width: 350px) {
+  .container-1 {
+    width: 270px;
+    background-color: slateblue;
+  }
+}
+@media screen and (min-width: 550px) {
+  .container-1 {
+    width: 320px;
+    background-color: indigo;
+  }
+} */
+
+
+/* .container-fluid {
+  padding: 1rem 0;
+  background-color: teal;
+}
+.container {
+  min-height: 100px;
+  width: 320px;
+  margin: auto;
+  background-color: antiquewhite;
+}
+@media screen and (min-width: 550px) {
+  .container-fluid {
+    background-color: slateblue;
+  }
+  .container {
+    width: calc(550px - 20px);
+    background-color: lavender;
+  }
+} */
+
