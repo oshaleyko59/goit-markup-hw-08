@@ -1,112 +1,4 @@
 @charset "UTF-8";
-* {
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-img {
-  display: block;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-body {
-  background-color: var(--color-white);
-  color: var(--color-primary);
-  font-family: Roboto, sans-serif;
-  font-size: 14px;
-  line-height: 1.7142857143;
-  letter-spacing: 0.03em;
-}
-
-.test-div {
-  background-color: aqua;
-  width: 100%;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.div-fluid {
-  padding: 1rem 0;
-  background-color: teal;
-}
-
-/* Приклад респонсивної верстки */
-.container-1 {
-  width: 100%;
-  min-height: 100px;
-  padding: 1rem 0;
-  background-color: rgb(111, 124, 124);
-}
-
-@media screen and (min-width: 450px) {
-  .container-1 {
-    width: 60%;
-    background-color: rgb(174, 168, 211);
-  }
-}
-@media screen and (min-width: 550px) {
-  .container-1 {
-    width: 30%;
-    background-color: rgb(107, 74, 130);
-  }
-}
-/* Приклад адаптивної верстки */
-/* .container-1{
-  width: 180px;
-  min-width: 280px;
-  min-height: 100px;
-  padding: 1rem 0;
-  background-color: teal;
-}
-@media screen and (min-width: 350px) {
-  .container-1 {
-    width: 270px;
-    background-color: slateblue;
-  }
-}
-@media screen and (min-width: 550px) {
-  .container-1 {
-    width: 320px;
-    background-color: indigo;
-  }
-} */
-/* .container-fluid {
-  padding: 1rem 0;
-  background-color: teal;
-}
-.container {
-  min-height: 100px;
-  width: 320px;
-  margin: auto;
-  background-color: antiquewhite;
-}
-@media screen and (min-width: 550px) {
-  .container-fluid {
-    background-color: slateblue;
-  }
-  .container {
-    width: calc(550px - 20px);
-    background-color: lavender;
-  }
-} */
 h1,
 h2,
 h3,
@@ -222,24 +114,24 @@ body {
 }
 
 .container {
-  width: calc(100% - 20px);
+  width: 100%;
+  min-width: 320px;
   padding: 0 15px;
   margin: 0 auto;
-  background-color: orange;
 }
 @media screen and (min-width: 480px) {
   .container {
-    background-color: teal;
+    width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    background-color: blue;
+    width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    background-color: white;
+    width: 1200px;
   }
 }
 
@@ -287,30 +179,63 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+.profile-list {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
   .profile-list {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 30px;
-    flex-direction: column;
-    color: red;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 .profile__item {
-  width: calc(100% - 60px);
+  width: 100%;
 }
 .profile__item::before {
   display: block;
   content: "";
   height: 120px;
-  width: calc(100% - 50px);
+  width: 100%;
   margin-bottom: 30px;
   border-radius: 4px;
   background-color: var(--color-background-secondary);
   background-repeat: no-repeat;
   background-position: center;
+}
+@media screen and (min-width: 768px) {
+  .profile__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .profile__item:nth-last-child(-n+2) > .profile__description {
+    min-height: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .profile__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+
+.profile__title {
+  font-size: 14px;
+  line-height: 1.1428571429;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--color-secondary);
+}
+@media screen and (max-width: 767px) {
+  .profile__title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profile__description {
+    min-height: 50px;
+  }
 }
 
 .attention.profile__item::before {
@@ -327,17 +252,4 @@ body {
 
 .technology.profile__item::before {
   background-image: url("../images/astronaut.svg");
-}
-
-.profile__title {
-  color: var(--color-secondary);
-  font-size: 14px;
-  line-height: 1.1428571429;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.profile__description {
-  text-transform: none;
 }

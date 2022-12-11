@@ -1,37 +1,22 @@
 .container {
-  width:calc(100% - 20px);
+  width: 100%;
+  min-width: 320px;
   padding: 0 15px;
   margin: 0 auto;
 
- // outline: 2px solid red;
- background-color: orange;
-
+  //NB! three media requests below shall be commented for responsive design
    @media screen and (min-width: 480px) {
-    background-color: teal;
+    width: 480px;
+   // background-color: teal;
   }
 
     @media screen and (min-width: 768px) {
-      background-color: blue;
+    //  background-color: blue;
+      width: 768px;
     }
 
     @media screen and (min-width: 1200px) {
-      background-color: white;
+    //  background-color: aqua;
+      width: 1200px;
     }
 }
-
- // breakpoint are 480 768 & 1200px
-//   @media screen and (min-width: 480px) {
-// .container {      background-color: teal;
-//     }
-//   }
-
-//     @media screen and (min-width: 768px) {
-//     .container {
-//       background-color: blue;
-//     }
-//   }
-//     @media screen and (min-width: 1200px) {
-//     .container {
-//       background-color: white;
-//     }
-//   }
