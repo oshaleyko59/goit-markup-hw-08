@@ -5,17 +5,17 @@
   margin: 0 auto;
 
   //NB! three media requests below shall be commented for responsive design
-   @media screen and (min-width: 480px) {
+  @include mobile  {
     width: 480px;
    // background-color: teal;
   }
 
-    @media screen and (min-width: 768px) {
+   @include tablet  {
     //  background-color: blue;
       width: 768px;
     }
 
-    @media screen and (min-width: 1200px) {
+   @include desktop  {
     //  background-color: aqua;
       width: 1200px;
     }

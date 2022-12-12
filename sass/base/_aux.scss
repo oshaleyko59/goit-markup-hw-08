@@ -1,13 +1,22 @@
 .section-title {
   color: var(--color-secondary);
-  @include font(null, 36px, calc(42 / 36), null);
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @include font(null, 28px, calc(32.81 / 28), null);
+
+  @include tablet {
+      @include font(null, 36px, calc(42 / 36), null);
+        margin-bottom: 50px;
+  }
 }
 
-.section-list {
-/*   @include flex(flex-start, space-between);
+.section-list { //TODO? used with other names
+  display: flex;
   gap: 30px;
-  flex-direction: column; */
-  color: red;
+  flex-direction: column;
+
+ @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

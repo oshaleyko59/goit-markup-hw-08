@@ -1,15 +1,12 @@
 .competence {
   display: none;
 
-  @media screen and (min-width: var(--width-desktop)) {
+  @include desktop {
     display:block;
     padding-bottom: 94px;
   }
 }
 
-.competence__header {
-  max-width: 200px;
-}
 .competence__item {
   width: 370px;
   position: relative;

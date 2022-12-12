@@ -80,6 +80,9 @@
     <symbol id="icon-tick" viewBox="0 0 44 32">
       <path d="M13.984 25.248l-10.432-9.952-3.552 3.364 13.984 13.34 30.016-28.636-3.528-3.364-26.488 25.248z"></path>
     </symbol>
+    <symbol id="icon-menu" viewBox="0 0 48 32">
+      <path d="M0 5.333v-5.333h48v5.333h-48zM0 18.667h48v-5.333h-48v5.333zM0 32h48v-5.333h-48v5.333z"></path>
+    </symbol>
   </defs>
 </svg>
 
