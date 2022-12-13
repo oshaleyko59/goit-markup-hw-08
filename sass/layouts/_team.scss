@@ -1,34 +1,41 @@
 .team {
-    background-color: var(--color-background-secondary);
-      padding: 60px 0;
+  background-color: var(--color-background-secondary);
+  padding: 60px 0;
 
   @include desktop {
     padding: 94px 0;
   }
 }
 
-.team-card {
+.team__card {
   background-color: var(--color-white);
-   @include font(null, 16px, calc(19 / 16), null);
+  @include font(null, 16px, calc(19 / 16), null);
 
   text-align: center;
   padding-bottom: 30px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: var(--shadow-static-triple);
+
+
+  @include tablet {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @include desktop {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  }
 }
 
-.team-card-name {
+.team__name {
   color: var(--color-secondary);
-   @include font(500, null, null, null);
+  @include font(500, null, null, null);
 
   margin-bottom: 10px;
   margin-top: 30px;
 }
 
-.team-card-description {
+.team__position {
   margin-bottom: 16px;
 }
 
-.soc-list.team-list { //TODO
-  justify-content: center;
-}
+

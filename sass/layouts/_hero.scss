@@ -11,25 +11,29 @@
   background-position: center;
   background-size: cover;
 
-  background-image: --hero-grad,
-    url("../images/hero/Hero480.jpg");
+  background-image: var(--hero-grad), url("../images/hero/Hero480.jpg");
+  background-image: var(--hero-grad), url("../images/hero/Hero480.webp");
 
   @include retina {
-    background-image: --hero-grad, url("../images/hero/Hero480@2x.jpg");
+    background-image: var(--hero-grad), url("../images/hero/Hero480@2x.jpg");
+    background-image: var(--hero-grad), url("../images/hero/Hero480@2x.webp");
   }
 
   @include mobile {
-    background-image: --hero-grad, url(../images/hero/Hero768.jpg);
+    background-image: var(--hero-grad), url("../images/hero/Hero768.jpg");
+    background-image: var(--hero-grad), url("../images/hero/Hero768.webp");
     @include retina {
-      background-image: --hero-grad, url("../images/hero/Hero768@2x.jpg");
+      background-image: var(--hero-grad), url("../images/hero/Hero768@2x.jpg");
+      background-image: var(--hero-grad), url("../images/hero/Hero768@2x.webp");
     }
   }
 
   @include tablet {
-    background-image: --hero-grad, url(../images/hero/Hero1600.jpg);
-
+    background-image: var(--hero-grad), url("../images/hero/Hero1600.jpg");
+    background-image: var(--hero-grad), url("../images/hero/Hero1600.webp");
     @include retina {
-      background-image: --hero-grad, url("../images/hero/Hero1600@2x.jpg");
+      background-image: var(--hero-grad), url("../images/hero/Hero1600@2x.jpg");
+      background-image: var(--hero-grad), url("../images/hero/Hero1600@2x.webp");
     }
   }
 

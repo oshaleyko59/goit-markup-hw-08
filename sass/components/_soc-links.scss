@@ -1,7 +1,12 @@
 .soc-list {
-  //block styles
+  //basic block styles
   display: flex;
   gap: 10px;
+
+  //modificators
+  &--centered {
+    justify-content: center;
+  }
 
   //elements styles
   &__item {
@@ -12,12 +17,12 @@
   &__link {
     @include round();
     @include flex-centered();
-     background-color: transparent;
+    background-color: transparent;
     transition: background-color var(--anim-timing);
 
-    //link modificators
+    //link style modificators
     &--bkg-dark {
- background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
     //active link styles
@@ -25,17 +30,15 @@
     &:hover {
       background-color: var(--color-accent);
     }
-    }
+  }
 
   &__icon {
-  fill: var(--color-fill-inactive);
+    fill: var(--color-fill-inactive);
     transition: fill var(--anim-timing);
-
+    //active icon styles
     .soc-list__link:focus &,
     .soc-list__link:hover & {
       fill: #fff;
     }
   }
-
 }
-

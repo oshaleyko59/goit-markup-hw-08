@@ -14,250 +14,298 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="./css/main.css">
-  <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+  <!-- <link rel="stylesheet" href="./css/main.css"> -->
+  <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
-
   <!--   <header class="hdr"> TODO -->
   <main>
-    <main>
-      <!-- hero section -->
-      <section class="hero">
-        <div class="container">
-          <h1 class="hero__title">Ефективні рішення для<br> вашого бізнесу</h1>
-          <button type="button" class="btn hero__btn" data-modal-open>
-            Замовити послугу</button>
-        </div>
-      </section>
+    <!-- hero section -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Ефективні рішення для<br> вашого бізнесу</h1>
+        <button type="button" class="btn hero__btn" data-modal-open>
+          Замовити послугу</button>
+      </div>
+    </section>
 
+    <!-- Особливості - profile section -->
+    <section class="profile">
+      <div class="container">
+        <h2 class="visually-hidden">Особливості</h2>
+        <ul class="profile-list">
+          <li class="attention profile__item">
+            <h3 class="profile__title">УВАГА ДО ДЕТАЛЕЙ</h3>
+            <p class="profile__description">
+              Ідейні міркування, і навіть початок повсякденної роботи з
+              формування позиції.
+            </p>
+          </li>
+          <li class="punctuality profile__item">
+            <h3 class="profile__title">ПУНКТУАЛЬНІСТЬ</h3>
+            <p class="profile__description">
+              Завдання організації, особливо рамки і місце навчання кадрів тягне
+              у себе.
+            </p>
+          </li>
+          <li class="planning profile__item">
+            <h3 class="profile__title">ПЛАНУВАННЯ</h3>
+            <p class="profile__description">
+              Так само консультація з широким активом значною мірою зумовлює.
+            </p>
+          </li>
+          <li class="technology profile__item">
+            <h3 class="profile__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+            <p class="profile__description">
+              Значимість цих проблем настільки очевидна, що реалізація планових
+              завдань.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-      <!-- Особливості - profile section -->
-      <section class="profile">
-        <div class="container">
-          <h2 class="visually-hidden">Особливості</h2>
-          <ul class="profile-list">
-            <li class="attention profile__item">
-              <h3 class="profile__title">УВАГА ДО ДЕТАЛЕЙ</h3>
-              <p class="profile__description">
-                Ідейні міркування, і навіть початок повсякденної роботи з
-                формування позиції.
-              </p>
-            </li>
-            <li class="punctuality profile__item">
-              <h3 class="profile__title">ПУНКТУАЛЬНІСТЬ</h3>
-              <p class="profile__description">
-                Завдання організації, особливо рамки і місце навчання кадрів тягне
-                у себе.
-              </p>
-            </li>
-            <li class="planning profile__item">
-              <h3 class="profile__title">ПЛАНУВАННЯ</h3>
-              <p class="profile__description">
-                Так само консультація з широким активом значною мірою зумовлює.
-              </p>
-            </li>
-            <li class="technology profile__item">
-              <h3 class="profile__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-              <p class="profile__description">
-                Значимість цих проблем настільки очевидна, що реалізація планових
-                завдань.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
+    <!-- Чим ми займаємося - competence section -displayed on desktop only -->
+    <section class="competence">
+      <div class="container">
+        <h2 class="section-title">Чим ми займаємося</h2>
+        <ul class="section-list">
+          <li class="competence__item">
+            <picture>
+              <source srcset="./images/competence/desktop370x294.webp 1x,
+                ./images/competence/desktop370x294@2x.webp 2x" type="image/webp">
+              <source srcset="./images/competence/desktop370x294.jpg 1x,
+                ./images/competence/desktop370x294@2x.jpg 2x" type="image/jpeg">
+              <img src="./images/competence/desktop370x294.jpg" alt="Розробка десктопного додатку" width="370">
+            </picture>
+            <h3 class="competence__title">Десктопні додатки</h3>
+          </li>
 
-      <!-- Чим ми займаємося - competence section -displayed on desktop only -->
-      <section class="competence">
-        <div class="container">
-          <h2 class="section-title">Чим ми займаємося</h2>
-          <ul class="section-list">
-            <li class="competence__item">
-              <!-- <div class="competence-img-wrap"> -->
-              <img scrset="./images/competence/desktop370x294.jpg 1x,
-                           ./images/competence/desktop370x294@2x.jpg 2x"
-                           src="./images/competence/desktop370x294.jpg"
-                          alt="Розробка десктопного додатку">
-              <h3 class="competence__title">Десктопні додатки</h3>
-              <!-- </div> -->
-            </li>
-            <li class="competence__item">
-              <!-- <div class="competence-img-wrap"> -->
+          <li class="competence__item">
+            <picture>
+              <source srcset="./images/competence/mobile370x294.webp 1x,
+                      ./images/competence/mobile370x294@2x.webp 2x" type="image/webp">
+              <source srcset="./images/competence/mobile370x294.jpg 1x,
+                      ./images/competence/mobile370x294@2x.jpg 2x" type="image/jpeg">
               <img src="./images/competence/mobile370x294.jpg" alt="Тестування мобільного додатку" width="370">
-              <h3 class="competence__title">Мобільні додатки</h3>
-            </li>
-            <!-- </div> -->
-            <li class="competence__item">
-              <!-- <div class="competence-img-wrap"> -->
+            </picture>
+            <h3 class="competence__title">Мобільні додатки</h3>
+          </li>
+
+          <li class="competence__item">
+            <!-- TODO picture? -->
+            <picture>
+              <source srcset="./images/competence/design370x294.webp 1x,
+                                  ./images/competence/design370x294@2x.webp 2x" type="image/webp">
+              <source srcset="./images/competence/design370x294.jpg 1x,
+                                  ./images/competence/design370x294@2x.jpg 2x" type="image/jpeg">
               <img src="./images/competence/design370x294.jpg" alt="Розробка дизайну" width="370">
-              <h3 class="competence__title">Дизайнерські рішення</h3>
-              <!-- </div> -->
-            </li>
-          </ul>
-        </div>
-      </section>
+            </picture>
+            <h3 class="competence__title">Дизайнерські рішення</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-      <!-- Наша команда - team section -->
-      <section class="team">
-        <div class="container">
-          <h2 class="section-title">Наша команда</h2>
-          <ul class="section-list">
-            <li class="team-card">
-              <img src="./images/team/team1-270x260.jpg" alt="член команди 1" width="270">
-              <p class="team-card-name">Ігор Дем'яненко</p>
-              <p lang="en" class="team-card-description">Product Designer</p>
-              <ul class="soc-list team-list">
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#">
-                    <svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg></a>
-                </li>
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg></a>
-                </li>
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg></a>
-                </li>
-              </ul>
-            </li>
-            <li class="team-card">
-              <img src="./images/team/team2-270x260.jpg" alt="член команди 2" width="270">
-              <p class="team-card-name">Ольга Рєпіна</p>
-              <p lang="en" class="team-card-description">Frontend Developer</p>
-              <ul class="soc-list team-list">
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#">
-                    <svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg></a>
-                </li>
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg></a>
-                </li>
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg></a>
-                </li>
-              </ul>
-            </li>
-            <li class="team-card">
-              <img src="./images/team/team3-270x260.jpg" alt="член команди 3" width="270">
-              <p class="team-card-name">Микола Тарасов</p>
-              <p lang="en" class="team-card-description">Marketing</p>
-              <ul class="soc-list team-list">
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#">
-                    <svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg></a>
-                </li>
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg></a>
-                </li>
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg></a>
-                </li>
-              </ul>
-            </li>
-            <li class="team-card">
-              <img src="./images/team/team4-270x260.jpg" alt="член команди 4" width="270">
-              <p class="team-card-name">Михайло Єрмаков</p>
-              <p lang="en" class="team-card-description">UI Designer</p>
-              <ul class="soc-list team-list">
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#">
-                    <svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg></a>
-                </li>
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg></a>
-                </li>
-                <li class="soc-list__item">
-                  <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg></a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </section>
+    <!-- Наша команда - team section -->
+    <section class="team">
+      <div class="container">
+        <h2 class="section-title">Наша команда</h2>
+        <ul class="section-list">
+          <li class="team__card">
+            <picture>
+              <source srcset="./images/team/team1-270x260.jpg 1x,
+                        ./images/team/team1-270x260@2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/team/team1-354x374.jpg 1x,
+                        ./images/team/team1-354x374@2x.jpg 2x" media="(min-width:768px)">
+              <source srcset="./images/team/team1-450x460.jpgx,
+                        ./images/team/team1-450x460@2x.jpg 2x" media="(max-width:767px)">
+              <img src="./images/team/team1-450x460@2x.jpg" width=450 alt="член команди 1">
+            </picture>
 
-      <!-- Постійні клієнти - client section -->
-      <section class="clients">
-        <div class="container">
-          <h2 class="clients__title">Постійні клієнти</h2>
-          <ul class="clients__list">
-            <li class="clients__item"><a class="clients__link" href="#">
-                <svg class="clients__icon">
-                  <use href="./images/icons.svg#icon-logo-1"></use>
-                </svg></a></li>
-            <li class="clients__item"><a class="clients__link" href="#">
-                <svg class="clients__icon">
-                  <use href="./images/icons.svg#icon-logo-2"></use>
-                </svg></a></li>
-            <li class="clients__item"><a class="clients__link" href="#">
-                <svg class="clients__icon">
-                  <use href="./images/icons.svg#icon-logo-3"></use>
-                </svg></a></li>
-            <li class="clients__item"><a class="clients__link" href="#">
-                <svg class="clients__icon">
-                  <use href="./images/icons.svg#icon-logo-4"></use>
-                </svg></a></li>
-            <li class="clients__item"><a class="clients__link" href="#">
-                <svg class="clients__icon">
-                  <use href="./images/icons.svg#icon-logo-5"></use>
-                </svg></a></li>
-            <li class="clients__item"><a class="clients__link" href="#">
-                <svg class="clients__icon">
-                  <use href="./images/icons.svg#icon-logo-6"></use>
-                </svg></a></li>
-          </ul>
-        </div>
-      </section>
+            <p class="team__name">Ігор Дем'яненко</p>
+            <p lang="en" class="team__position">Product Designer</p>
+            <ul class="soc-list soc-list--centered">
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#">
+                  <svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg></a>
+              </li>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg></a>
+              </li>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg></a>
+              </li>
+            </ul>
+          </li>
 
-    </main>
+          <li class="team__card">
+            <picture>
+              <source srcset="./images/team/team2-270x260.jpg 1x,
+                        ./images/team/team2-270x260@2x.jpg2x" media="(min-width: 1200px)">
+              <source srcset="./images/team/team2-354x374.jpg1x,
+                        ./images/team/team2-354x374@2x.jpgia=" (min-width:768px)">
+              <source srcset="./images/team/team2-450x460.jpg 1x,
+                        ./images/team/team2-450x460@2x.jpg 2x" media="(max-width:767px)">
+              <img src="./images/team/team2-450x460@2x.jpg" width=450 alt="член команди 2">
+            </picture>
+
+            <p class="team__name">Ольга Рєпіна</p>
+            <p lang="en" class="team__position">Frontend Developer</p>
+            <ul class="soc-list soc-list--centered">
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#">
+                  <svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg></a>
+              </li>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg></a>
+              </li>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="team__card">
+            <picture>
+              <source srcset="./images/team/team3-270x260.jpg,
+                        ./images/team/team3-270x260@2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/team/team3-354x374.jpg 1x,
+                        ./images/team/team3-354x374@2x.jpg 2x" media="(min-width:768px)">
+              <source srcset="./images/team/team3-450x460.jpg 1x,
+                        ./images/team/team3-450x460@2x.jpg 2x" media="(max-width:767px)">
+              <img src="./images/team/team3-450x460@2x.jpg" width=450 alt="член команди 3">
+            </picture>
+
+            <p class="team__name">Микола Тарасов</p>
+            <p lang="en" class="team__position">Marketing</p>
+            <ul class="soc-list soc-list--centered">
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#">
+                  <svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg></a>
+              </li>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg></a>
+              </li>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg></a>
+              </li>
+            </ul>
+          </li>
+
+            <li class="team__card">
+              <picture>
+                <source srcset="./images/team/team4-270x260.jpg,
+                                    ./images/team/team4-270x260@2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./images/team/team4-354x374.jpg 1x,
+                                    ./images/team/team4-354x374@2x.jpg 2x" media="(min-width:768px)">
+                <source srcset="./images/team/team4-450x460.jpg 1x,
+                                    ./images/team/team4-450x460@2x.jpg 2x" media="(max-width:767px)">
+                <img src="./images/team/team4-450x460@2x.jpg" width=450 alt="член команди 4">
+              </picture>
+
+            <p class="team__name">Михайло Єрмаков</p>
+            <p lang="en" class="team__position">UI Designer</p>
+            <ul class="soc-list soc-list--centered">
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#">
+                  <svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg></a>
+              </li>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg></a>
+              </li>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="#"><svg class="soc-list__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Постійні клієнти - client section -->
+    <section class="clients">
+      <div class="container">
+        <h2 class="clients__title">Постійні клієнти</h2>
+        <ul class="clients__list">
+          <li class="clients__item"><a class="clients__link" href="#">
+              <svg class="clients__icon">
+                <use href="./images/icons.svg#icon-logo-1"></use>
+              </svg></a></li>
+          <li class="clients__item"><a class="clients__link" href="#">
+              <svg class="clients__icon">
+                <use href="./images/icons.svg#icon-logo-2"></use>
+              </svg></a></li>
+          <li class="clients__item"><a class="clients__link" href="#">
+              <svg class="clients__icon">
+                <use href="./images/icons.svg#icon-logo-3"></use>
+              </svg></a></li>
+          <li class="clients__item"><a class="clients__link" href="#">
+              <svg class="clients__icon">
+                <use href="./images/icons.svg#icon-logo-4"></use>
+              </svg></a></li>
+          <li class="clients__item"><a class="clients__link" href="#">
+              <svg class="clients__icon">
+                <use href="./images/icons.svg#icon-logo-5"></use>
+              </svg></a></li>
+          <li class="clients__item"><a class="clients__link" href="#">
+              <svg class="clients__icon">
+                <use href="./images/icons.svg#icon-logo-6"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
 </body>
 
 </html>
