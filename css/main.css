@@ -286,6 +286,24 @@ body {
   fill: #fff;
 }
 
+.hdr {
+  border-bottom: 1px solid #ececec;
+}
+.hdr__container {
+  display: flex;
+  align-items: center;
+  /*   display: flex;
+    align-items: center; */
+}
+.hdr__logo {
+  color: var(--color-black);
+  padding: 24px 0;
+  margin-right: 93px;
+}
+.hdr__navigation {
+  margin-right: auto;
+}
+
 /* фон - Велике зображення з ефектом затемнення (під хедером).
 не розтягується ширше свого оригінального розміру 1600рх.
 Затемнення - багатошаровий фон з градієнтом  */

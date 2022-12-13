@@ -20,6 +20,41 @@
 
 <body>
   <!--   <header class="hdr"> TODO -->
+  <header class="hdr">
+    <div class="container hdr__container">
+      <a class="logo hdr__logo" href="/"><span class="logo__accent">Web</span>Studio</a>
+
+      <nav class="navigation hdr__navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--current" href="./index.html">Студія</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--active" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--active" href="#">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="contacts hdr__contacts">
+        <li class="contacts__item">
+          <a class="contacts__link" href="mailto:info@devstudio.com">
+            <svg width="16" height="12" class="contacts__svg">
+              <use href="./images/icons.svg#icon-envelope"></use>
+            </svg>info@devstudio.com</a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__link" href="tel:+380961111111">
+            <svg width="10" height="16" class="contacts__svg">
+              <use href="./images/icons.svg#icon-smartphone"></use>
+            </svg>+38 096 111 11 11</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
   <main>
     <!-- hero section -->
     <section class="hero">
@@ -119,7 +154,7 @@
                         ./images/team/team1-270x260@2x.jpg 2x" media="(min-width: 1200px)">
               <source srcset="./images/team/team1-354x374.jpg 1x,
                         ./images/team/team1-354x374@2x.jpg 2x" media="(min-width:768px)">
-              <source srcset="./images/team/team1-450x460.jpgx,
+              <source srcset="./images/team/team1-450x460.jpg 1x,
                         ./images/team/team1-450x460@2x.jpg 2x" media="(max-width:767px)">
               <img src="./images/team/team1-450x460@2x.jpg" width=450 alt="член команди 1">
             </picture>
@@ -155,11 +190,11 @@
           <li class="team__card">
             <picture>
               <source srcset="./images/team/team2-270x260.jpg 1x,
-                        ./images/team/team2-270x260@2x.jpg2x" media="(min-width: 1200px)">
-              <source srcset="./images/team/team2-354x374.jpg1x,
-                        ./images/team/team2-354x374@2x.jpgia=" (min-width:768px)">
+                        ./images/team/team2-270x260@2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/team/team2-354x374.jpg 1x,
+                        ./images/team/team2-354x374@2x.jpg 2x" media="(min-width: 768px)">
               <source srcset="./images/team/team2-450x460.jpg 1x,
-                        ./images/team/team2-450x460@2x.jpg 2x" media="(max-width:767px)">
+                        ./images/team/team2-450x460@2x.jpg 2x" media="(max-width: 767px)">
               <img src="./images/team/team2-450x460@2x.jpg" width=450 alt="член команди 2">
             </picture>
 
@@ -193,12 +228,12 @@
 
           <li class="team__card">
             <picture>
-              <source srcset="./images/team/team3-270x260.jpg,
+              <source srcset="./images/team/team3-270x260.jpg 1x,
                         ./images/team/team3-270x260@2x.jpg 2x" media="(min-width: 1200px)">
               <source srcset="./images/team/team3-354x374.jpg 1x,
-                        ./images/team/team3-354x374@2x.jpg 2x" media="(min-width:768px)">
+                        ./images/team/team3-354x374@2x.jpg 2x" media="(min-width: 768px)">
               <source srcset="./images/team/team3-450x460.jpg 1x,
-                        ./images/team/team3-450x460@2x.jpg 2x" media="(max-width:767px)">
+                        ./images/team/team3-450x460@2x.jpg 2x" media="(max-width: 767px)">
               <img src="./images/team/team3-450x460@2x.jpg" width=450 alt="член команди 3">
             </picture>
 
@@ -230,16 +265,16 @@
             </ul>
           </li>
 
-            <li class="team__card">
-              <picture>
-                <source srcset="./images/team/team4-270x260.jpg,
+          <li class="team__card">
+            <picture>
+              <source srcset="./images/team/team4-270x260.jpg 1x,
                                     ./images/team/team4-270x260@2x.jpg 2x" media="(min-width: 1200px)">
-                <source srcset="./images/team/team4-354x374.jpg 1x,
-                                    ./images/team/team4-354x374@2x.jpg 2x" media="(min-width:768px)">
-                <source srcset="./images/team/team4-450x460.jpg 1x,
-                                    ./images/team/team4-450x460@2x.jpg 2x" media="(max-width:767px)">
-                <img src="./images/team/team4-450x460@2x.jpg" width=450 alt="член команди 4">
-              </picture>
+              <source srcset="./images/team/team4-354x374.jpg 1x,
+                                    ./images/team/team4-354x374@2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="./images/team/team4-450x460.jpg 1x,
+                                    ./images/team/team4-450x460@2x.jpg 2x" media="(max-width: 767px)">
+              <img src="./images/team/team4-450x460@2x.jpg" width=450 alt="член команди 4">
+            </picture>
 
             <p class="team__name">Михайло Єрмаков</p>
             <p lang="en" class="team__position">UI Designer</p>
