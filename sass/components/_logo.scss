@@ -4,8 +4,8 @@
   font-family: Raleway;
   display: inline-block;
 
-  //Element styles
-  &__accent {
+  //Element modificators
+  &--accent {
     color: var(--color-accent);
   }
 }

@@ -1,4 +1,12 @@
 @charset "UTF-8";
+.navigation__list, .contacts {
+  display: flex;
+  padding: auto 0;
+}
+.navigation__list > li:not(:last-child), .contacts > li:not(:last-child) {
+  margin-right: 50px;
+}
+
 h1,
 h2,
 h3,
@@ -66,6 +74,17 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
   }
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.1923076923;
+  font-family: Raleway;
+  display: inline-block;
+}
+.logo--accent {
+  color: var(--color-accent);
 }
 
 :root {
@@ -182,6 +201,54 @@ body {
   text-transform: uppercase;
 }
 
+/* line height increased to extende link active zone */
+.contacts {
+  font-weight: 500;
+  line-height: 3;
+}
+.contacts__link {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  fill: var(--color-primary);
+  transition: color var(--anim-timing), fill var(--anim-timing);
+}
+.contacts__link:hover, .contacts__link:focus {
+  color: var(--color-accent);
+  fill: var(--color-accent);
+}
+
+.navigation__list {
+  font-weight: 500;
+  line-height: 3;
+  letter-spacing: 0.02em;
+}
+.navigation__link {
+  display: inline-block;
+  color: var(--color-secondary);
+  text-align: center;
+  transition: color var(--anim-timing);
+}
+.navigation__link--current {
+  position: relative;
+  color: var(--color-accent);
+}
+.navigation__link--current::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-accent);
+  display: block;
+  position: absolute;
+  bottom: -20px;
+}
+.navigation__link--active:hover, .navigation__link--active:focus {
+  color: var(--color-accent);
+  fill: var(--color-accent);
+}
+
 .card {
   height: 404px;
   width: 370px;
@@ -293,7 +360,7 @@ body {
   display: flex;
   align-items: center;
   /*   display: flex;
-    align-items: center; */
+  align-items: center; */
 }
 .hdr__logo {
   color: var(--color-black);
@@ -301,7 +368,12 @@ body {
   margin-right: 93px;
 }
 .hdr__navigation {
+  display: none;
   margin-right: auto;
+}
+
+.contacts.hdr__contacts {
+  display: none;
 }
 
 /* фон - Велике зображення з ефектом затемнення (під хедером).

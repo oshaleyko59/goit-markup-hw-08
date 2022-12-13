@@ -1,20 +1,23 @@
 @import "./utils/mixins";
-//@import './utils/placeholders';
+@import './utils/placeholders';
 //NB! mixins must always be first import
 
 //@import './utils/test';
 
+
 @import "./base/reset";
 @import "./base/aux";
 
+@import "./components/logo";
 @import "./utils/variables";
 @import "./utils/hide";
 @import "./components/container";
 @import "./layouts/competence";
 
-// @import './components/contacts';
-// @import './components/navigation';
-// @import './components/logo';
+@import "./components/contacts";
+@import "./components/navigation";
+
+
 // @import './components/addr';
 @import "./components/card";
 @import "./components/cardset";

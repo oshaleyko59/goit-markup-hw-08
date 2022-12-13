@@ -4,18 +4,22 @@
   //mixes
   &__container {
     @include flex(center, null);
-/*   display: flex;
+    /*   display: flex;
   align-items: center; */
+  }
+
+  &__logo {
+    color: var(--color-black);
+    padding: 24px 0;
+    margin-right: 93px;
+  }
+
+  &__navigation {
+    display: none;
+    margin-right: auto;
+  }
 }
 
-&__logo {
-  color: var(--color-black);
-  padding: 24px 0;
-  margin-right: 93px;
-}
-
-&__navigation {
-  margin-right: auto;
-}
-
+.contacts.hdr__contacts {
+  display: none;
 }
