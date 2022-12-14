@@ -78,8 +78,8 @@ body {
 
 .logo {
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.1923076923;
+  font-size: 24px;
+  line-height: 1.1741666667;
   font-family: Raleway;
   display: inline-block;
 }
@@ -357,15 +357,13 @@ body {
   border-bottom: 1px solid #ececec;
 }
 .hdr__container {
+  padding: 10px 15px;
   display: flex;
   align-items: center;
-  /*   display: flex;
-  align-items: center; */
+  justify-content: space-between;
 }
 .hdr__logo {
   color: var(--color-black);
-  padding: 24px 0;
-  margin-right: 93px;
 }
 .hdr__navigation {
   display: none;
@@ -374,6 +372,22 @@ body {
 
 .contacts.hdr__contacts {
   display: none;
+}
+
+.hdr__menu-icon {
+  fill: var(--color-secondary);
+  transition: fill var(--anim-timing);
+  display: block;
+}
+.hdr__menu-btn:focus .hdr__menu-icon, .hdr__menu-btn:hover .hdr__menu-icon {
+  fill: var(--color-accent);
+}
+
+.hdr__menu-btn {
+  background-color: #fff;
+  border-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* фон - Велике зображення з ефектом затемнення (під хедером).
