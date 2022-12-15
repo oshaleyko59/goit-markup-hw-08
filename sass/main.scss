@@ -18,20 +18,20 @@
 @import "./components/navigation";
 
 
-// @import './components/addr';
+@import './components/addr';
 @import "./components/card";
 @import "./components/cardset";
 
-// @import './components/subscription';
+@import './components/subscription';
 @import "./components/soc-links";
-// @import './components/modal';
-// @import './components/filters';
-// @import './components/buttons';
+@import './components/modal';
+@import './components/filters';
+@import './components/buttons';
 
 @import "./layouts/header";
 @import "./layouts/hero";
 @import "./layouts/profile";
 @import "./layouts/team";
 @import "./layouts/clients";
-// @import './layouts/portfolio';
-// @import './layouts/footer';
+@import './layouts/portfolio';
+@import './layouts/footer';

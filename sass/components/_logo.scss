@@ -1,21 +1,18 @@
 .logo {
   //Block styles
-  @include font(700, 24px, calc(28.18 / 24), null);
   font-family: Raleway;
   display: inline-block;
 
+  @include till_desktop {
+    @include font(700, 24px, calc(28.18 / 24), null);
+  }
 
-  //@include font(700, 26px, calc(31 / 26), null);
-
+  @include desktop {
+    @include font(700, 26px, calc(31 / 26), null);
+  }
   //Element modificators
   &--accent {
     color: var(--color-accent);
   }
 }
-
-
-// <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none">
-//   <path fill="#212121" fill-rule="evenodd" d="M8 14.667V12h24v2.667H8Zm0 6.666h24v-2.666H8v2.666ZM8 28h24v-2.667H8V28Z" clip-rule="evenodd"/>
-// </svg>
-
 

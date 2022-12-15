@@ -1,14 +1,32 @@
 /* line height increased to extende link active zone */
 .contacts {
-  @extend %hdr-list;
-  @include font(500, null, 3, null);
+  display: none;
 
-  //elements styles
-  &__link {
-    color: var(--color-primary);
-    @include flex-centered();
-    fill: var(--color-primary);
-    transition: color var(--anim-timing), fill var(--anim-timing);
-@include accented-link;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    @include font(500, 12px, calc(14 / 12), 0.02);
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap:40px;
+  }
+}
+
+//elements styles
+.contacts__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  fill: var(--color-primary);
+  transition: color var(--anim-timing), fill var(--anim-timing);
+  @include accented-link;
+
+  @include desktop {
+    gap: 10px;
   }
 }

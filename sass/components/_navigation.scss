@@ -1,37 +1,54 @@
 .navigation {
-  //no block styles
+  //block styles
+  display: none;
 
-  //Elements styles
-  &__list {
-    @extend %hdr-list;
-    @include font(500, null, 3, 0.02em);
+  @include tablet {
+    display: block;
+    margin-right: auto;
+    margin-left: 88px;
+
+    //Elements styles
+    &__list {
+      display: flex;
+      gap: 50px;
+      @include font(500, null, calc(16 /14), 0.02em);
+    }
+
+    &__link {
+      //Element styles
+      color: var(--color-secondary);
+      transition: color var(--anim-timing);
+
+      //modificators
+      &--current {
+        position: relative;
+        color: var(--color-accent);
+      }
+
+      &--current::after {
+        content: "";
+        height: 4px;
+        width: 100%;
+        background-color: var(--color-accent);
+        display: block;
+        position: absolute;
+        bottom: -33px;
+      }
+
+      &--active {
+        @include accented-color;
+      }
+    }
   }
 
-  &__link {
-    //Element styles
-    display: inline-block;
-    color: var(--color-secondary);
-    text-align: center;
-    transition: color var(--anim-timing);
+  @include desktop {
+    margin-left: 93px;
 
-    //modificators
-    &--current {
-      position: relative;
-      color: var(--color-accent);
+    &__list {
+      gap: 53px;
     }
-
-    &--current::after {
-      content: "";
-      height: 4px;
-      width: 100%;
-      background-color: var(--color-accent);
-      display: block;
-      position: absolute;
-      bottom: -20px;
-    }
-
-    &--active {
-      @include accented-link;
-    }
+      &--current::after {
+        bottom: -20px;
+      }
   }
 }

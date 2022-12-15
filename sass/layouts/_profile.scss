@@ -50,13 +50,13 @@
   margin-bottom: 10px;
   color: var(--color-secondary);
 
-  @media screen and (max-width: 767px) {
+  @include only_mobile {
     text-align: center;
   }
 }
 
 .profile__description {
-  @media screen and (max-width: 767px) {
+  @include only_mobile {
     min-height: 50px; //as per Figma
   }
 }

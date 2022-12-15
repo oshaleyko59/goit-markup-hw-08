@@ -13,6 +13,13 @@
   }
 }
 
+@mixin accented-color {
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
+}
+
 @mixin white-on-accent {
   color: var(--color-white);
   background-color: var(--color-accent);
@@ -72,6 +79,18 @@
 
 @mixin desktop {
   @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin till_desktop {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin only_mobile {
+  @media screen and (max-width: 767px) {
     @content;
   }
 }

@@ -1,44 +1,130 @@
 .hdr {
   border-bottom: 1px solid #ececec;
+}
 
-  //mixes
-  &__container {
-    padding: 10px 15px;
-    @include flex(center, space-between);
-    //    @include flex(center, null);
-  }
+//mixes
+.hdr__container {
+  height: 60px;
+  padding: auto 15px;
+  @include flex(center, space-between);
 
-  &__logo {
-    color: var(--color-black);
-    // padding: 24px 0;
-    // margin-right: 93px;
-  }
-
-  &__navigation {
-    display: none;
-    margin-right: auto;
+  @include tablet {
+    height: 80px;
   }
 }
 
-.contacts.hdr__contacts {
+.hdr__logo {
+  color: var(--color-black);
+}
+
+// **************** header mobile menu styles ****************
+//** basic styles
+.hdr__menu {
   display: none;
-}
-
-.hdr__menu-icon {
-  fill: var(--color-secondary);
-  transition: fill var(--anim-timing);
-  display: block;
-  
-  //active icon styles
-  .hdr__menu-btn:focus &,
-  .hdr__menu-btn:hover & {
-    fill: var(--color-accent);
+  @include only_mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 0 48px 40px;
   }
 }
 
-.hdr__menu-btn {
+//** buttons
+.menu-open {
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    background-color: #fff;
+    border-style: none;
+    margin: 0;
+    padding: 0;
+    fill: var(--color-secondary);
+    transition: fill var(--anim-timing);
+
+    &:hover,
+    &:focus {
+      fill: var(--color-accent);
+    }
+  }
+}
+
+.menu-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   background-color: #fff;
   border-style: none;
   margin: 0;
   padding: 0;
+  fill: var(--color-secondary);
+  transition: fill var(--anim-timing);
+
+  &:hover,
+  &:focus {
+    fill: var(--color-accent);
+  }
+}
+
+.menu-icon {
+  display: block;
+}
+
+//** navigation
+.nav {
+  @include font(500, 40px, calc(46.88 / 40), 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.nav__link {
+  color: var(--color-secondary);
+  @include accented-color;
+}
+
+//** contacts
+.menu__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  @include font(500, 24px, calc(28.13 / 24), 0.02);
+}
+.contacts-phone {
+  @include font(500, 34px, calc(39.84 / 34), 0.02);
+  color: var(--color-accent);
+}
+.contacts-email {
+  color: var(--color-primary);
+
+  @include font(500, 34px, calc(39.84 / 34), 0.02);
+}
+
+//** social
+.soc {
+  display: flex;
+  @include font(500, 18px, calc(22 / 18), 0.02);
+  margin-top: 32px;
+}
+
+.soc__item {
+  padding: 0 10px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
+.soc__link {
+  color: var(--color-accent);
 }
