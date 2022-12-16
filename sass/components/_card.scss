@@ -1,6 +1,15 @@
 .card {
-  height: 404px;
-  width: 370px;
+  width: 450px;
+
+  @include tablet {
+    width: 354px;
+  }
+
+  @include desktop {
+    width: 370px;
+  }
+
+  @include font(500, 18px, calc(28 / 18), 0.03em);
   transition: box-shadow var(--anim-timing);
 
   &:hover {
@@ -8,6 +17,13 @@
   }
 }
 
+.card__img {
+  width: 100%;
+
+  @include tablet {
+    width: 354px;
+  }
+}
 /* =   Синій оверлей з текстом на картках сторінки Портфоліо з'являється
 при ховері в будь-якому місці картки. оверлей  виїжджає знизу */
 .card__wrap {
@@ -18,7 +34,8 @@
 .card__overlay {
   width: 100%;
   height: 100%;
-  padding: 63px 24px;
+
+  padding: 49px 24px 49px 24px; //63px
   background-color: rgba(33, 150, 243, 0.9);
   color: #ffffff;
   @include font(400, 18px, calc(28 / 18), null);
@@ -39,7 +56,7 @@
 }
 
 .card__title {
-  @include font(700, 18px, 2, 0.06);
+  @include font(700, 18px, 2);
   color: var(--color-secondary);
   margin-bottom: 4px;
 }
@@ -47,8 +64,12 @@
 .card__subtitle {
   @include font(null, 16px, calc(30 / 16), null);
   color: var(--color-primary);
+
+  // @media screen and (min-width: 480px)
+  &.double-height {
+    @include only_tablet {
+      padding-bottom: 36px;
+    }
+  }
 }
-
-
-
 

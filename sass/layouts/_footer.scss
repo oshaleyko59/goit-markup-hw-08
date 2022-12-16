@@ -1,32 +1,48 @@
 .ftr {
   //block styles
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
   background-color: var(--color-background-black);
 
   //Elements
-  &__wrap {
-    padding-top: 12px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @include desktop {
+      flex-wrap: nowrap;
+      align-items: baseline;
+      justify-content: space-between;
+    }
   }
 
   &__title {
     margin-bottom: 20px;
     color: #ffffff;
-    text-transform: uppercase;
     @include font(null, 14px, calc(16.41 / 14), null);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    @include desktop {
+      text-align: left;
+    }
   }
 
   //Mixes
   &__logo {
     color: var(--color-white);
-    margin-bottom: 20px;
-    margin-right: 93px;
+    margin-bottom: 28px;
+    width: 100%;
+    text-align: center;
+    //  margin-right: 93px;
+    // margin-bottom: 20px;
   }
-
-  &__container {
-   @include flex(baseline, space-between);
-  }
-
 }
-
-

@@ -23,6 +23,7 @@
   display: none;
   @include only_mobile {
     display: flex;
+    z-index: 1;
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
@@ -78,7 +79,7 @@
 
 //** navigation
 .nav {
-  @include font(500, 40px, calc(46.88 / 40), 0.02);
+  @include font(500, 40px, calc(46.88 / 40), 0.02em);
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -94,22 +95,22 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  @include font(500, 24px, calc(28.13 / 24), 0.02);
+  @include font(500, 24px, calc(28.13 / 24), 0.02em);
 }
 .contacts-phone {
-  @include font(500, 34px, calc(39.84 / 34), 0.02);
+  @include font(500, 34px, calc(39.84 / 34), 0.02em);
   color: var(--color-accent);
 }
 .contacts-email {
   color: var(--color-primary);
 
-  @include font(500, 34px, calc(39.84 / 34), 0.02);
+  @include font(500, 34px, calc(39.84 / 34), 0.02em);
 }
 
 //** social
 .soc {
   display: flex;
-  @include font(500, 18px, calc(22 / 18), 0.02);
+  @include font(500, 18px, calc(22 / 18), 0.02em);
   margin-top: 32px;
 }
 

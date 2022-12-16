@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    @include font(500, 12px, calc(14 / 12), 0.02);
+    @include font(500, 12px, calc(14 / 12), 0.02em);
   }
 
   @include desktop {

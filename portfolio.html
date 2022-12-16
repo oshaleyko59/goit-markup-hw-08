@@ -20,9 +20,58 @@
 <body>
   <header class="hdr">
     <div class="container hdr__container">
-      <a class="logo hdr__logo" href="/"><span class="logo--accent">Web</span>Studio</a>
+      <a class="logo hdr__logo" href="/">
+        <span class="logo--accent">Web</span>Studio
+      </a>
 
-      <nav class="navigation hdr__navigation">
+      <!-- mobile menu -->
+      <div class="hdr__menu is-hidden" data-menu>
+        <button class="menu-close" data-menu-close>
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <ul class="nav">
+          <li><a class="nav__link" href="./index.html">Студія</a>
+          </li>
+          <li><a class="nav__link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li><a class="nav__link" href="#">Контакти</a>
+          </li>
+        </ul>
+
+        <div class="menu__contacts">
+          <a href="tel:+380961111111" class="contacts-phone">+38 096 111 11 11</a>
+          <a href="mailto:info@devstudio.com" class="contacts-email">info@devstudio.com</a>
+        </div>
+
+        <ul class="soc">
+          <li class="soc__item">
+            <a class="soc__link" href="#">
+              Instagram</a>
+          </li>
+          <li class="soc__item">
+            <a class="soc__link" href="#">Twitter</a>
+          </li>
+          <li class="soc__item">
+            <a class="soc__link" href="#">Facebook</a>
+          </li>
+          <li class="soc__item">
+            <a class="soc__link" href="#">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+
+      <button type="button" class="menu-open" data-menu-open>
+        <svg width="40" height="40" class="menu-icon">
+          <use href="./images/icons.svg#icon-menu"></use>
+        </svg>
+      </button>
+      <!-- eo mobile menu -->
+
+      <!-- navigation component -->
+      <nav class="navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link navigation__link--active" href="./index.html">Студія</a>
@@ -36,16 +85,17 @@
         </ul>
       </nav>
 
-      <ul class="contacts hdr__contacts">
-        <li class="contacts__item">
+      <!-- contacts component -->
+      <ul class="contacts">
+        <li>
           <a class="contacts__link" href="mailto:info@devstudio.com">
-            <svg width="16" height="12" class="contacts__svg">
+            <svg width="14" height="10">
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>info@devstudio.com</a>
         </li>
-        <li class="contacts__item">
+        <li>
           <a class="contacts__link" href="tel:+380961111111">
-            <svg width="10" height="16" class="contacts__svg">
+            <svg width="10" height="14">
               <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>+38 096 111 11 11</a>
         </li>
@@ -75,20 +125,30 @@
           </li>
         </ul>
 
-        <ul class="cardset ">
+        <ul class="cardset">
           <li class="cardset__item">
             <!-- <a href="#"> -->
             <div class="card">
               <div class="card__wrap">
-                <img src="./images/project1.jpg" alt="Приклад сторінки сайту" width="370" height="294"
-                  class="card__img">
+                <!-- too lazy to export another 18 pix for desktop...
+                it would be convenient to have a possibility in to show only part of the image
+                as it is for background picture... -->
+                <picture class="card__img">
+                  <source srcset="./images/projects/proj0-354.jpg 1x,
+                                              ./images/projects/proj0-354-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/projects/proj0-450.jpg 1x,
+                            ./images/projects/proj0-450-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/projects/proj0-450-2x.jpg" alt="Приклад сторінки сайту" width="450">
+                </picture>
+
                 <div class="card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.</div>
               </div>
+
               <div class="card__description">
                 <p class="card__title">Технокряк</p>
-                <p class="card__subtitle">Веб-сайт</p>
+                <p class="card__subtitle double-height">Веб-сайт</p>
               </div>
             </div>
             <!-- </a> -->
@@ -97,7 +157,13 @@
             <!-- <a href="#"> -->
             <div class="card">
               <div class="card__wrap">
-                <img src="./images/project2.jpg" alt="Постер з моментом гри" width="370" height="294" class="card__img">
+                <picture class="card__img">
+                  <source srcset="./images/projects/proj1-354.jpg 1x,
+                          ./images/projects/proj1-354-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/projects/proj1-450.jpg 1x,
+                                            ./images/projects/proj1-450-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/projects/proj1-450-2x.jpg" alt="Постер з моментом гри" width="450">
+                </picture>
                 <div class="card__overlay">Lorem ipsum dolor sit amet consectetur
                   adipisicing elit. Cumque, voluptatibus. Saepe obcaecati tempore cum ipsa.
                   Fugiat laboriosam deserunt consequatur aut.</div>
@@ -113,7 +179,13 @@
             <!-- <a href="#"> -->
             <div class="card">
               <div class="card__wrap">
-                <img src="./images/project3.jpg" alt="Іконка додатку" width="370" height="294" class="card__img">
+                <picture class="card__img">
+                  <source srcset="./images/projects/proj2-354.jpg 1x,
+                          ./images/projects/proj2-354-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/projects/proj2-450.jpg 1x,
+                                ./images/projects/proj2-450-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/projects/proj2-450-2x.jpg" alt="Іконка додатку" width="450">
+                </picture>
                 <div class="card__overlay">Lorem ipsum, dolor sit amet consectetur
                   adipisicing elit. Nulla beatae similique inventore.</div>
               </div>
@@ -128,7 +200,13 @@
             <!-- <a href="#"> -->
             <div class="card">
               <div class="card__wrap">
-                <img src="./images/project4.jpg" alt="Гарнітура" width="370" height="294" class="card__img">
+                <picture class="card__img">
+                  <source srcset="./images/projects/proj3-354.jpg 1x,
+                        ./images/projects/proj3-354-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/projects/proj3-450.jpg 1x,
+                                  ./images/projects/proj3-450-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/projects/proj3-450-2x.jpg" alt="Гарнітура" width="450">
+                </picture>
                 <div class="card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.</div>
@@ -144,7 +222,13 @@
             <!-- <a href="#"> -->
             <div class="card">
               <div class="card__wrap">
-                <img src="./images/project5.jpg" alt="Дві коробки" width="370" height="294" class="card__img">
+                <picture class="card__img">
+                  <source srcset="./images/projects/proj4-354.jpg 1x,
+                      ./images/projects/proj4-354-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/projects/proj4-450.jpg 1x,
+                      ./images/projects/proj4-450-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/projects/proj4-450-2x.jpg" alt="Дві коробки" width="450">
+                </picture>
                 <div class="card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.</div>
@@ -160,8 +244,13 @@
             <!-- <a href="#"> -->
             <div class="card">
               <div class="card__wrap">
-                <img src="./images/project6.jpg" alt="Сторінка сайту на дисплеї" width="370" height="294"
-                  class="card__img">
+                <picture class="card__img">
+                  <source srcset="./images/projects/proj5-354.jpg 1x,
+                                  ./images/projects/proj5-354-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/projects/proj5-450.jpg 1x,
+                                ./images/projects/proj5-450-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/projects/proj5-450-2x.jpg" alt="Сторінка сайту на дисплеї" width="450">
+                </picture>
                 <div class="card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все
                   це дозволить відвідувачу отримати
@@ -178,7 +267,13 @@
             <!-- <a href="#"> -->
             <div class="card">
               <div class="card__wrap">
-                <img src="./images/project7.jpg" alt="Розкритий буклет" width="370" height="294" class="card__img">
+                <picture class="card__img">
+                  <source srcset="./images/projects/proj6-354.jpg 1x,
+                                  ./images/projects/proj6-354-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/projects/proj6-450.jpg 1x,
+                                    ./images/projects/proj6-450-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/projects/proj6-450-2x.jpg" alt="Розкритий буклет" width="450">
+                </picture>
                 <div class="card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все
                   це дозволить відвідувачу отримати
@@ -195,7 +290,13 @@
             <!-- <a href="#"> -->
             <div class="card">
               <div class="card__wrap">
-                <img src="./images/project8.jpg" alt="Ярлик" width="370" height="294" class="card__img">
+                <picture class="card__img">
+                  <source srcset="./images/projects/proj7-354.jpg 1x,
+                                  ./images/projects/proj7-354-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/projects/proj7-450.jpg 1x,
+                                ./images/projects/proj7-450-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/projects/proj7-450-2x.jpg" alt="Ярлик" width="450">
+                </picture>
                 <div class="card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.</div>
@@ -211,8 +312,13 @@
             <!-- <a href="#"> -->
             <div class="card">
               <div class="card__wrap">
-                <img src="./images/project9.jpg" alt="Сторінка додатку на лептопі" width="370" height="294"
-                  class="card__img">
+                <picture class="card__img">
+                  <source srcset="./images/projects/proj8-354.jpg 1x,
+                                  ./images/projects/proj8-354-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/projects/8-450.jpg 1x,
+                              ./images/projects/proj8-450-2x.jpg 2x" media="(max-width: 767px)">
+                  <img src="./images/projects/proj8-450-2x.jpg" alt="Сторінка додатку на лептопі" width="450">
+                </picture>
                 <div class="card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
                   сервісів. Все це дозволить відвідувачу отримати
                   вичерпні відомості про компанію чи приватну особу.</div>
@@ -232,30 +338,24 @@
   <!-- footer -->
   <footer class="ftr">
     <div class="container ftr__container">
-      <div ftr__div>
+      <div>
+        <!-- logo component -->
         <a href="/" class="logo ftr__logo">
           <span class="logo--accent">Web</span>Studio</a>
-        <address class="addr ftr__addr">
-          <ul class="addr__list">
-            <li class="addr__item">
-              <a class="addr__link addr__link--white"
-                href="https://www.google.com/maps/place/Lesi+Ukrainky+Blvd,+26,+Kyiv,+Ukraine,+02000/@50.4265807,30.5383858,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
-                target="_blank" rel="noopener noreferrer">м. Київ, пр-т Лесі Українки, 26
-              </a>
-            </li>
-            <li class="addr__item">
-              <a class="addr__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            </li>
-            <li class="addr__item">
-              <a class="addr__link" href="tel:+380961111111">+38 096 111 11 11</a>
-            </li>
-          </ul>
+        <!-- addr component -->
+        <address class="addr">
+          <a class="addr__link addr__link--white"
+            href="https://www.google.com/maps/place/Lesi+Ukrainky+Blvd,+26,+Kyiv,+Ukraine,+02000/@50.4265807,30.5383858,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
+            target="_blank" rel="noopener noreferrer">м. Київ, пр-т Лесі Українки, 26
+          </a>
+          <a class="addr__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          <a class="addr__link" href="tel:+380961111111">+38 096 111 11 11</a>
         </address>
       </div>
 
-      <div class="ftr__wrap">
+      <div>
         <h3 class="ftr__title">приєднуйтесь</h3>
-
+        <!-- soc-links component -->
         <ul class="soc-list ftr__soc-list">
           <li class="soc-list__item">
             <a class="soc-list__link soc-list__link--bkg-dark" href="#">
@@ -285,13 +385,14 @@
         </ul>
       </div>
 
-      <!-- HW6 email input form added to footer -->
-      <div class="ftr__wrap">
+      <!-- //HW6 email input form added to footer -->
+      <div>
         <h3 class="ftr__title">Підпишіться на розсилку</h3>
-        <form>
-          <div class="send-email ftr__send-email">
+        <!-- subscription component -->
+        <form class="subscription__form">
+          <div class="subscription__wrap">
             <input type="email" name="email" placeholder="E-mail" aria-label="Електронна пошта" required
-              class="send-email__input" />
+              class="subscription__input">
             <button type="submit" class="btn send-email__btn">
               <span class="btn__label">Підписатися</span>
               <svg width="24" height="24" class="btn__svg">
@@ -304,6 +405,7 @@
     </div>
   </footer>
 
+<script src="./js/menu.js"></script>
 </body>
 
 </html>

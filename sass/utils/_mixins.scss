@@ -95,6 +95,12 @@
   }
 }
 
+@mixin only_tablet {
+  @media (min-width: 767px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
 @mixin retina {
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
