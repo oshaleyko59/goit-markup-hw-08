@@ -4,13 +4,13 @@
   margin-bottom: 30px;
   @include font(null, 28px, calc(32.81 / 28), null);
 
-  @include tablet {
+  @include desktop {
       @include font(null, 36px, calc(42 / 36), null);
         margin-bottom: 50px;
   }
 }
 
-.section-list { 
+.section-list {
   display: flex;
   gap: 30px;
   flex-direction: column;

@@ -48,7 +48,7 @@ body {
   font-size: 28px;
   line-height: 1.1717857143;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .section-title {
     font-size: 36px;
     line-height: 1.1666666667;
@@ -227,6 +227,8 @@ body {
   .contacts {
     flex-direction: row;
     gap: 40px;
+    font-size: 14px;
+    line-height: 1.1428571429;
   }
 }
 
@@ -300,6 +302,11 @@ body {
 .addr {
   font-style: inherit;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .addr {
+    text-align: left;
+  }
 }
 .addr__link {
   display: block;
@@ -511,6 +518,9 @@ body {
   transition: fill var(--anim-timing);
 }
 .soc-list__link:focus .soc-list__icon, .soc-list__link:hover .soc-list__icon {
+  fill: #fff;
+}
+.soc-list__icon.icon--fill-white {
   fill: #fff;
 }
 
@@ -1294,4 +1304,9 @@ translate, і opacity.
   margin-bottom: 28px;
   width: 100%;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .ftr__logo {
+    text-align: left;
+  }
 }

@@ -13,6 +13,8 @@
   @include desktop {
     flex-direction: row;
     gap:40px;
+    font-size: 14px;
+    line-height: calc(16 / 14);
   }
 }
 

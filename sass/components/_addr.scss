@@ -2,6 +2,10 @@
   font-style: inherit;
   text-align: center;
 
+  @include desktop {
+    text-align: left;
+  }
+
   &__link {
     display: block;
     line-height: calc(16 / 14);
