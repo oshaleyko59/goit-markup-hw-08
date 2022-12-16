@@ -30,6 +30,7 @@
     position: fixed;
     top: 0;
     left: 0;
+   // min-width: 320px;
     width: 100vw;
     height: 100vh;
     padding: 48px 0 48px 40px;
@@ -79,7 +80,12 @@
 
 //** navigation
 .nav {
-  @include font(500, 40px, calc(46.88 / 40), 0.02em);
+  @include font(500, 8vw, calc(46.88 / 40), 0.02em);
+
+  @include mobile {
+    font-size: 40px;
+  }
+
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -95,22 +101,36 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  @include font(500, 24px, calc(28.13 / 24), 0.02em);
 }
+
 .contacts-phone {
-  @include font(500, 34px, calc(39.84 / 34), 0.02em);
+  @include font(500, 7vw, calc(39.84 / 34), 0.02em);
+
+  @include mobile {
+    font-size: 34px;
+  }
+
   color: var(--color-accent);
 }
+
 .contacts-email {
   color: var(--color-primary);
+  @include font(500, 7vw, calc(28.13 / 24), 0.02em);
 
-  @include font(500, 34px, calc(39.84 / 34), 0.02em);
+  @include mobile {
+    font-size: 24px;
+  }
 }
 
 //** social
 .soc {
   display: flex;
-  @include font(500, 18px, calc(22 / 18), 0.02em);
+  @include font(500, 4vw, calc(22 / 18), 0.02em);
+
+    @include mobile {
+    font-size: 18px;
+  }
+
   margin-top: 32px;
 }
 

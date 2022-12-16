@@ -317,7 +317,8 @@ body {
 }
 
 .card {
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5555555556;
@@ -338,15 +339,13 @@ body {
   box-shadow: var(--card-shadow);
 }
 
-.card__img {
+/* .card__img {
   width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .card__img {
+
+  @include tablet {
     width: 354px;
   }
-}
-
+} */
 /* =   Синій оверлей з текстом на картках сторінки Портфоліо з'являється
 при ховері в будь-якому місці картки. оверлей  виїжджає знизу */
 .card__wrap {
@@ -871,12 +870,17 @@ translate, і opacity.
 
 .nav {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 8vw;
   line-height: 1.172;
   letter-spacing: 0.02em;
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+@media screen and (min-width: 480px) {
+  .nav {
+    font-size: 40px;
+  }
 }
 
 .nav__link {
@@ -890,35 +894,46 @@ translate, і opacity.
   display: flex;
   flex-direction: column;
   gap: 32px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.1720833333;
-  letter-spacing: 0.02em;
 }
 
 .contacts-phone {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 7vw;
   line-height: 1.1717647059;
   letter-spacing: 0.02em;
   color: var(--color-accent);
+}
+@media screen and (min-width: 480px) {
+  .contacts-phone {
+    font-size: 34px;
+  }
 }
 
 .contacts-email {
   color: var(--color-primary);
   font-weight: 500;
-  font-size: 34px;
-  line-height: 1.1717647059;
+  font-size: 7vw;
+  line-height: 1.1720833333;
   letter-spacing: 0.02em;
+}
+@media screen and (min-width: 480px) {
+  .contacts-email {
+    font-size: 24px;
+  }
 }
 
 .soc {
   display: flex;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 4vw;
   line-height: 1.2222222222;
   letter-spacing: 0.02em;
   margin-top: 32px;
+}
+@media screen and (min-width: 480px) {
+  .soc {
+    font-size: 18px;
+  }
 }
 
 .soc__item {
